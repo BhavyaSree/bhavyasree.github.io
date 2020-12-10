@@ -1,0 +1,41 @@
+site_name: Bhavya Sree Bindela
+site_author: Bhavya Sree Bindela
+site_description: >-
+  Bhavya Sree Bindela
+theme:
+  name: material
+  custom_dir: material
+  features:
+    - tabs
+plugins:
+ - mknotebooks:
+    execute: false
+markdown_extensions:
+  - pymdownx.arithmatex
+  - codehilite:
+      linenums: true
+  - admonition
+  - pymdownx.betterem
+  - pymdownx.superfences
+  - markdown.extensions.footnotes
+  - markdown.extensions.attr_list
+  - markdown.extensions.def_list
+  - markdown.extensions.tables
+  - markdown.extensions.abbr
+  - markdown.extensions.md_in_html
+  - toc:
+      toc_depth : "1-1"
+extra_javascript:
+  - javascripts/extra.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/BhavyaSree
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/bhavyabindela
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/bhavyabindela
+repo_name: BhavyaSree/BhavyaSree
+repo_url: https://github.com/BhavyaSree/BhavyaSree
+edit_uri: ""
