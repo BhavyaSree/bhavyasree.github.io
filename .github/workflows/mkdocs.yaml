@@ -6,6 +6,7 @@ on:
       - main
 jobs:
   deploy:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,8 +21,9 @@ jobs:
           mv sub/PythonClass/docs docs/Python
           # ln -s sub/PythonClass docs/Python
           ls -l docs/Python
+          rm -f docs/Python/Notebooks/16.web-scraping.ipynb
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
       - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy -v --force
