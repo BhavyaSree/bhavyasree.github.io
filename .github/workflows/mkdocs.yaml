@@ -15,9 +15,9 @@ jobs:
           token: ${{ github.token }}
           path: "sub/PythonClass"
           fetch-depth: "1"
-      -run: |
-        ln -s sub/PythonClass docs/Python
-        tree
+      - run: |
+          ln -s sub/PythonClass docs/Python
+          tree
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
