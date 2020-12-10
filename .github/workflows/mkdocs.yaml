@@ -17,7 +17,8 @@ jobs:
           path: "sub/PythonClass"
           fetch-depth: "1"
       - run: |
-          ln -s sub/PythonClass docs/Python
+          mv sub/PythonClass/docs docs/Python
+          # ln -s sub/PythonClass docs/Python
           ls -l docs/Python
       - uses: actions/setup-python@v2
         with:
