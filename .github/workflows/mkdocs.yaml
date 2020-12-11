@@ -5,8 +5,8 @@ on:
     branches:
       - main
 jobs:
-  deploy:
-    timeout-minutes: 5
+  checkout:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -17,13 +17,50 @@ jobs:
           token: ${{ github.token }}
           path: "sub/PythonClass"
           fetch-depth: "1"
+      - uses: actions/checkout@v2
+        with:
+          repository: "BhavyaSree/Kubernetes-Beginner"
+          ref: "main"
+          token: ${{ github.token }}
+          path: "sub/Kubernetes"
+          fetch-depth: "1"
+      - uses: actions/checkout@v2
+        with:
+          repository: "BhavyaSree/PySpark"
+          ref: "main"
+          token: ${{ github.token }}
+          path: "sub/PySpark"
+          fetch-depth: "1"
+      - uses: actions/checkout@v2
+        with:
+          repository: "BhavyaSree/kubernetes-CKAD"
+          ref: "main"
+          token: ${{ github.token }}
+          path: "sub/CKAD"
+          fetch-depth: "1"
+      - uses: actions/checkout@v2
+        with:
+          repository: "BhavyaSree/NodeJs"
+          ref: "main"
+          token: ${{ github.token }}
+          path: "sub/NodeJs"
+          fetch-depth: "1"
       - run: |
           mv sub/PythonClass/docs docs/Python
           # ln -s sub/PythonClass docs/Python
           ls -l docs/Python
           rm -f docs/Python/Notebooks/16.web-scraping.ipynb
+          mv sub/Kubernetes/docs docs/Kubernetes
+          mv sub/CKAD/docs docs/CKAD
+          mv sub/NodeJS docs/NodeJS
+          mv sub/PySpark/docs docs/PySpark
+  deploy:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install -r requirements.txt
-      - run: mkdocs gh-deploy -v --force
+      - run: |
+          pip install -r requirements.txt
+          mkdocs gh-deploy --force --verbose
