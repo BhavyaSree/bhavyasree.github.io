@@ -56,6 +56,7 @@ jobs:
           mv sub/PySpark/docs docs/PySpark
   deploy:
     timeout-minutes: 10
+    needs: [checkout]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-python@v2
