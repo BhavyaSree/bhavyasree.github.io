@@ -13,35 +13,35 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: "BhavyaSree/PythonClass"
-          # ref: "main"
+          ref: "master"
           token: ${{ github.token }}
           path: "sub/PythonClass"
           fetch-depth: "1"
       - uses: actions/checkout@v2
         with:
           repository: "BhavyaSree/Kubernetes-Beginner"
-          # ref: "main"
+          ref: "master"
           token: ${{ github.token }}
           path: "sub/Kubernetes"
           fetch-depth: "1"
       - uses: actions/checkout@v2
         with:
           repository: "BhavyaSree/PySpark"
-          # ref: "main"
+          ref: "main"
           token: ${{ github.token }}
           path: "sub/PySpark"
           fetch-depth: "1"
       - uses: actions/checkout@v2
         with:
           repository: "BhavyaSree/kubernetes-CKAD"
-          # ref: "main"
+          ref: "master"
           token: ${{ github.token }}
           path: "sub/CKAD"
           fetch-depth: "1"
       - uses: actions/checkout@v2
         with:
           repository: "BhavyaSree/NodeJs"
-          # ref: "main"
+          ref: "master"
           token: ${{ github.token }}
           path: "sub/NodeJs"
           fetch-depth: "1"
