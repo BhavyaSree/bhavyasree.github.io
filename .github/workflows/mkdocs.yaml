@@ -43,7 +43,7 @@ jobs:
           repository: "BhavyaSree/NodeJs"
           ref: "master"
           token: ${{ secrets.ACCESS_TOKEN }}
-          path: "sub/NodeJs"
+          path: "sub/NodeJS"
           fetch-depth: "1"
       - run: |
           mv sub/PythonClass/docs docs/Python
