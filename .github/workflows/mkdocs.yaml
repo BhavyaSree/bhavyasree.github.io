@@ -54,11 +54,6 @@ jobs:
           mv sub/CKAD/docs docs/CKAD
           mv sub/NodeJS docs/NodeJS
           mv sub/PySpark/docs docs/PySpark
-  deploy:
-    timeout-minutes: 10
-    needs: [checkout]
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
