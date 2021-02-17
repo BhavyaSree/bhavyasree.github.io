@@ -1,0 +1,1 @@
+Hi! Welcome. This is Python Class. Now, we are practising some programs in Python.

@@ -1,0 +1,25 @@
+{
+  "name": "node-farm",
+  "version": "1.0.0",
+  "description": "Learning nodeJs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BhavyaSree/NodeJs.git"
+  },
+  "author": "Bhavya Sree",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BhavyaSree/NodeJs/issues"
+  },
+  "homepage": "https://github.com/BhavyaSree/NodeJs#readme",
+  "dependencies": {
+    "slugify": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodeman": "^1.1.2"
+  }
+}
